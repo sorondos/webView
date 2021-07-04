@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78425475268D294200C76966 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 78425474268D294200C76966 /* splash.png */; };
+		786816E7269108D4006BCFC5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786816E6269108D4006BCFC5 /* API.swift */; };
+		786816E9269125E8006BCFC5 /* NavTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786816E8269125E8006BCFC5 /* NavTabsViewController.swift */; };
 		78797679268C6DF700D23B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78797678268C6DF700D23B47 /* AppDelegate.swift */; };
 		7879767B268C6DF700D23B47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879767A268C6DF700D23B47 /* SceneDelegate.swift */; };
 		7879767D268C6DF700D23B47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879767C268C6DF700D23B47 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78425474268D294200C76966 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		786816E6269108D4006BCFC5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		786816E8269125E8006BCFC5 /* NavTabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTabsViewController.swift; sourceTree = "<group>"; };
 		78797675268C6DF700D23B47 /* webView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78797678268C6DF700D23B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7879767A268C6DF700D23B47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +43,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78425473268D28D300C76966 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				78425474268D294200C76966 /* splash.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		7879766C268C6DF700D23B47 = {
 			isa = PBXGroup;
 			children = (
+				78425473268D28D300C76966 /* img */,
 				78797677268C6DF700D23B47 /* webView */,
 				78797676268C6DF700D23B47 /* Products */,
 			);
@@ -63,6 +78,8 @@
 				78797681268C6DF800D23B47 /* Assets.xcassets */,
 				78797683268C6DF800D23B47 /* LaunchScreen.storyboard */,
 				78797686268C6DF800D23B47 /* Info.plist */,
+				786816E6269108D4006BCFC5 /* API.swift */,
+				786816E8269125E8006BCFC5 /* NavTabsViewController.swift */,
 			);
 			path = webView;
 			sourceTree = "<group>";
@@ -124,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78425475268D294200C76966 /* splash.png in Resources */,
 				78797685268C6DF800D23B47 /* LaunchScreen.storyboard in Resources */,
 				78797682268C6DF800D23B47 /* Assets.xcassets in Resources */,
 				78797680268C6DF700D23B47 /* Main.storyboard in Resources */,
@@ -137,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786816E9269125E8006BCFC5 /* NavTabsViewController.swift in Sources */,
 				7879767D268C6DF700D23B47 /* ViewController.swift in Sources */,
 				78797679268C6DF700D23B47 /* AppDelegate.swift in Sources */,
+				786816E7269108D4006BCFC5 /* API.swift in Sources */,
 				7879767B268C6DF700D23B47 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DA27Y3CDR2;
 				INFOPLIST_FILE = webView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DA27Y3CDR2;
 				INFOPLIST_FILE = webView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
