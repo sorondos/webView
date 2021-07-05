@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		78797680268C6DF700D23B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7879767E268C6DF700D23B47 /* Main.storyboard */; };
 		78797682268C6DF800D23B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78797681268C6DF800D23B47 /* Assets.xcassets */; };
 		78797685268C6DF800D23B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78797683268C6DF800D23B47 /* LaunchScreen.storyboard */; };
+		78F5EA5A2691B0DD0061F865 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 78F5EA592691B0DD0061F865 /* SVGKitSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F5EA5A2691B0DD0061F865 /* SVGKitSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,9 @@
 			dependencies = (
 			);
 			name = webView;
+			packageProductDependencies = (
+				78F5EA592691B0DD0061F865 /* SVGKitSwift */,
+			);
 			productName = webView;
 			productReference = 78797675268C6DF700D23B47 /* webView.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +132,9 @@
 				Base,
 			);
 			mainGroup = 7879766C268C6DF700D23B47;
+			packageReferences = (
+				78F5EA582691B0DD0061F865 /* XCRemoteSwiftPackageReference "SVGKit" */,
+			);
 			productRefGroup = 78797676268C6DF700D23B47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,6 +316,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DA27Y3CDR2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = webView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -328,6 +340,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DA27Y3CDR2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = webView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78F5EA582691B0DD0061F865 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78F5EA592691B0DD0061F865 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78F5EA582691B0DD0061F865 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7879766D268C6DF700D23B47 /* Project object */;
 }

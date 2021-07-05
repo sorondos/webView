@@ -16,95 +16,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" restorationIdentifier="_tabBar" translatesAutoresizingMaskIntoConstraints="NO" id="a0S-Rr-Nup">
-                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Item" id="4tc-rm-ORu"/>
-                                    <tabBarItem title="Item" id="IJB-df-Hqn"/>
-                                    <tabBarItem title="Item" id="IDR-db-tcm"/>
-                                    <tabBarItem title="Item" id="NWM-kx-Lx3"/>
-                                    <tabBarItem title="Item" id="cQ7-ZF-6YK"/>
-                                </items>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <nil key="shadowImage"/>
-                                </variation>
-                            </tabBar>
                             <navigationBar contentMode="scaleToFill" restorationIdentifier="_navigationBar" translatesAutoresizingMaskIntoConstraints="NO" id="ceq-X2-WgY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="La Finestra sul Cielo" id="hWE-ew-eDj">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="compose" id="ILl-w6-isH"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="compose" id="ILl-w6-isH">
+                                            <connections>
+                                                <action selector="_homeBtnTapped:" destination="BYZ-38-t0r" id="fvu-eG-vAj"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <wkWebView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-LR-T61">
-                                <rect key="frame" x="0.0" y="78" width="414" height="691"/>
+                            <tabBar contentMode="scaleToFill" verticalCompressionResistancePriority="749" restorationIdentifier="_tabBar" translatesAutoresizingMaskIntoConstraints="NO" id="a0S-Rr-Nup">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <nil key="shadowImage"/>
+                                </variation>
+                            </tabBar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-LR-T61">
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-fy-d4z" userLabel="Drawwer">
+                                <rect key="frame" x="-8" y="78" width="172" height="691"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ceq-X2-WgY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Yi-6R-LIx"/>
+                            <constraint firstItem="dqM-fy-d4z" firstAttribute="leadingMargin" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AJO-Yc-eFr"/>
                             <constraint firstItem="hj5-LR-T61" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C1X-nT-XlM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dqM-fy-d4z" secondAttribute="trailing" constant="250" id="DIz-L7-78Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0S-Rr-Nup" secondAttribute="trailing" id="I3c-Pe-lS3"/>
+                            <constraint firstItem="a0S-Rr-Nup" firstAttribute="top" secondItem="ceq-X2-WgY" secondAttribute="bottomMargin" constant="684" id="Igp-y7-A6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dqM-fy-d4z" secondAttribute="bottom" constant="44" id="LLF-Pd-myp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ceq-X2-WgY" secondAttribute="trailing" id="Pj6-mB-Agj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="dqM-fy-d4z" secondAttribute="leading" constant="8" id="QKj-dz-Jlc"/>
                             <constraint firstItem="a0S-Rr-Nup" firstAttribute="top" secondItem="hj5-LR-T61" secondAttribute="bottom" id="T0A-hv-1jb"/>
                             <constraint firstItem="a0S-Rr-Nup" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="URo-Il-1Sq"/>
                             <constraint firstItem="hj5-LR-T61" firstAttribute="top" secondItem="ceq-X2-WgY" secondAttribute="bottom" id="aaR-Go-H55"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a0S-Rr-Nup" secondAttribute="bottom" id="eyH-Mg-Cgm"/>
                             <constraint firstItem="ceq-X2-WgY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kaW-yf-Eyc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hj5-LR-T61" secondAttribute="trailing" id="nDK-XT-MZY"/>
+                            <constraint firstItem="dqM-fy-d4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="vVe-eV-aJe"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="_drawer" destination="dqM-fy-d4z" id="Dkh-oc-LXD"/>
                         <outlet property="_navTab" destination="a0S-Rr-Nup" id="tSI-xi-eLA"/>
                         <outlet property="_webView" destination="hj5-LR-T61" id="C9k-Zs-SAO"/>
+                        <outlet property="leading" destination="AJO-Yc-eFr" id="YCq-kT-x0S"/>
+                        <outlet property="trailing" destination="DIz-L7-78Z" id="vnU-et-TfC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="-644"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="0si-V0-gDD">
-            <objects>
-                <tableViewController id="RGR-Fm-b88" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SDr-z0-ecf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R5V-eG-GMf">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R5V-eG-GMf" id="YoL-7M-mHQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="RGR-Fm-b88" id="LNb-OT-muA"/>
-                            <outlet property="delegate" destination="RGR-Fm-b88" id="ZzR-7I-0pV"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jt1-J9-KsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-301" y="-652"/>
+            <point key="canvasLocation" x="-765.21739130434787" y="-615.40178571428567"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
