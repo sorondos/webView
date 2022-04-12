@@ -1,0 +1,15 @@
+{
+    "name": "sorondos/webview",
+    "description": "Hola mundo satis",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Soron2",
+            "email": "info@soron2.coms"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+    }
+}
